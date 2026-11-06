@@ -1,0 +1,51 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules/
+
+# Production Build Output
+dist/
+dist-ssr/
+release/
+*.local
+
+# Bundles & Backups
+*.bundle
+*.zip
+*.tar.gz
+
+# Testing & Coverage
+coverage/
+playwright-report/
+test-results/
+
+# Editor & OS Files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary files & caches
+*.tmp
+*.bak
+.eslintcache
+
+# Environment variables
+.env
+.env.*
+!.env.example

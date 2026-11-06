@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXERP AI — Standalone Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#142B45', teal: '#00BFA6', surface: '#F4F6F8', ink: '#182230',
+            muted: '#667085', border: '#E2E8F0', success: '#16A34A', warning: '#F59E0B',
+            danger: '#DC2626', chart2: '#6485A6',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Space Grotesk', 'Inter', 'sans-serif'],
+          },
+          boxShadow: { card: '0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#F4F6F8;color:#182230;font-family:Inter,system-ui,sans-serif}
+    .font-display{font-family:'Space Grotesk',Inter,sans-serif}
+    ::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-thumb{background:#CBD5E1;border-radius:3px}
+    .sidebar-link.active{background:rgba(0,191,166,.15);color:#00BFA6;border-left:3px solid #00BFA6}
+    .sidebar-link:hover:not(.active){background:rgba(255,255,255,.06)}
+    .msg-user{background:#142B45;color:#fff;border-radius:12px 12px 4px 12px}
+    .msg-ai{background:#fff;border:1px solid #E2E8F0;border-radius:12px 12px 12px 4px}
+    .chip:hover{border-color:#00BFA6;color:#00BFA6}
+    table th{position:sticky;top:0;background:#F8FAFC;z-index:1}
+    @media(max-width:768px){.sidebar-desktop{display:none!important}}
+    .mobile-drawer{transform:translateX(-100%);transition:transform .25s ease}
+    .mobile-drawer.open{transform:translateX(0)}
+    .focus-ring:focus-visible{outline:2px solid #00BFA6;outline-offset:2px}
+    .animate-pulse-soft{animation:pulse 1.5s cubic-bezier(.4,0,.6,1) infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/prop-types@15.8.1/prop-types.min.js"></script>
+  <script src="https://unpkg.com/recharts@2.12.7/umd/Recharts.js"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel" src="./app.jsx" data-presets="react"></script>
+</body>
+</html>
